@@ -206,6 +206,8 @@ export class EvertecBackendService {
    */
   public emptyCar(){
     localStorage.removeItem('orderTemp');
+    this._orderTemp.products = [];
+    this.onProductInTempOrder.emit(this._orderTemp);
   }
 
   /**

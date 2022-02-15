@@ -21,7 +21,7 @@
       </button>
       <a mat-flat-button color="accent"
          *ngIf="stateOrder.status.status === 'PENDING'"
-         [href]="stateOrder.request.fields[0].value">continuar pago</a>
+         [href]="stateOrder.requestUrl">continuar pago</a>
     </mat-card-actions>
   </mat-card>
 </div>

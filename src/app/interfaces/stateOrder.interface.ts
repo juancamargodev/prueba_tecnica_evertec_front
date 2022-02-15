@@ -9,6 +9,7 @@ export interface StateOrder{
   status:       Status;
   request:      Request;
   subscription: null;
+  requestUrl: string;
 }
 
 export interface Request {

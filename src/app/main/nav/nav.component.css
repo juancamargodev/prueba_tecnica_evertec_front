@@ -16,4 +16,10 @@
   z-index: 1;
 }
 
+.fab-order{
+  position: fixed;
+  bottom: 8%;
+  right: 9%;
+}
+
 

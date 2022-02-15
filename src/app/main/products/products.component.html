@@ -1,13 +1,14 @@
 <div class="container" fxLayout="row" fxLayoutAlign="space-evenly center">
     <mat-card class="product-card" *ngFor="let product of products">
-      <mat-card-header>
-        <mat-card-title>{{product.name}}</mat-card-title>
+      <mat-card-header fxLayoutAlign="center center">
+        <mat-card-title><b>{{product.name | titlecase}}</b></mat-card-title>
       </mat-card-header>
       <img mat-card-image src="{{product.image_url}}">
-      <mat-card-content fxLayout="row" fxLayoutAlign="space-evenly center">
-        <mat-card-subtitle><b>Precio:</b> ${{product.price}}</mat-card-subtitle>
+      <mat-card-content fxLayout="column" fxLayoutAlign="center center">
+        <mat-card-subtitle class="card-price">{{product.price | currency}}</mat-card-subtitle>
         <button mat-flat-button color="primary" (click)="addProduct(product)">
-          agregar
+          <mat-icon>add_shopping_cart</mat-icon>
+          Agregar
         </button>
       </mat-card-content>
     </mat-card>

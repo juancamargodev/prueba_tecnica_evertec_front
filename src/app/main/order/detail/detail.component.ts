@@ -40,9 +40,7 @@ export class DetailComponent implements OnInit {
     const orderId = parseInt(this.id);
     this.evertecService.stateOrder(orderId).subscribe(
       (resp:StateOrderResponse) => {
-      if(resp.success === true){
         this.responseStateOrder = resp.data;
-      }
     },
       error => this.evertecService.showErrorAlert(error)
     );
